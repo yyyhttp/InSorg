@@ -56,7 +56,7 @@ pip install -r requirements.txt
 ## ➡️Usage
 
 ---
-### • Dataset Preparation
+### • Dataset
 The gastric and intestinal organoid dataset was randomly split into training, validation, and test subsets at a ratio of 8:1:1, with the detailed dataset structure presented as follows:
 ```bash
 InSorg/
