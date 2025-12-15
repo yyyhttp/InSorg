@@ -96,14 +96,14 @@ CUDA_VISIBLE_DEVICES=2 python tools/test.py InSorg.py --weights
 
 ## ⚖️License
 
-OrgLine is released under the [MIT License](MIT-License.txt), a permissive open-source license that allows for free use, modification, distribution, and private use of the software. This license requires that the original copyright notice and permission notice be included in all copies or substantial portions of the software.
+This project is released under the [Apache 2.0 license](LICENSE).
 
 
 
 ## 👍Acknowledgement
 
-We would like to thank the authors of [efficientteacher](https://github.com/AlibabaResearch/efficientteacher).
-
+MMDetection is an open source project that is contributed by researchers and engineers from various colleges and companies. We appreciate all the contributors who implement their methods or add new features, as well as users who give valuable feedbacks.
+We wish that the toolbox and benchmark could serve the growing research community by providing a flexible toolkit to reimplement existing methods and develop their own new detectors.
 
 
 ## 📃Citation
