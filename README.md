@@ -77,21 +77,19 @@ InSorg/
 ### • Training
 
 ```shell script
-# Navigate to the supervised training configuration directory
-cd OrgTrans/configs/sup
-# Run supervised training using the 'sup.yaml' configuration file
-python train.py --cfg configs/sup/sup.yaml
-
-# Navigate to the semi-supervised training configuration directory
-cd OrgTrans/configs/ssod
-# Run semi-supervised training using the 'transfer_ssod.yaml' configuration file and load the weights from supervised training
-python train.py --cfg configs/ssod/transfer_ssod.yaml
+# Activate InSorg Conda environment
+conda activate InSorg_env
+# Enter InSorg project root directory
+cd Insorg
+# Launch model training on GPU 2 with InSorg.py configuration
+CUDA_VISIBLE_DEVICES=2 python tools/train.py InSorg.py
 ```
 
-### • Testing the Semi-Supervised Model
+### • Testing 
 
 ```shell script
-python val.py --cfg configs/ssod/transfer_ssod.yaml --weights 
+# Run model test on GPU 2 with InSorg.py config; --weights specifies pre-trained model weights
+CUDA_VISIBLE_DEVICES=2 python tools/test.py InSorg.py --weights
 ```
 
 
