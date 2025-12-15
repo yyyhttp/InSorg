@@ -30,30 +30,23 @@ InSorg is an intelligent organoid image analysis platform integrated with state-
 
 ---
 
-### • Environment Setup Configuration
-
-Automatic environment setup, please be patient.
+### • Environment Setup
 
 ```bash
 
 # ===================== Environment and Dependency Installation Workflow (InSorg Project) =====================
 # 1. Create a conda virtual environment named InSorg_env with Python 3.8 (core runtime environment for the project)
 conda create -n InSorg_env python=3.8
-
 # 2. Activate the InSorg_env environment (all subsequent installations are executed in this isolated environment to avoid global dependency conflicts)
 conda activate InSorg_env
-
 # 3. Install the PyTorch framework (core dependency for deep learning computations; the latest compatible version for Python 3.8 will be installed if no specific version is specified)
 pip3 install torch 
-
 # 4. Install and upgrade the OpenMIM tool (package management tool for OpenMMLab projects, facilitating the installation of MM-series libraries)
 pip install -U openmim
 # 5. Install MMEngine via mim (MMEngine is the foundational runtime framework of OpenMMLab, providing universal engineering capabilities)
 mim install mmengine 
-
 # 6. Install MMCV (fundamental computer vision library of OpenMMLab, offering core CV operators and tools)
 pip install mmcv
-
 # 7. Batch install remaining project dependencies (requirements.txt is the custom dependency list of the project, including all packages not installed individually)
 pip install -r requirements.txt
 ```
