@@ -26,7 +26,7 @@ InSorg is an intelligent organoid image analysis platform integrated with state-
 
 ## 📦Getting Started
 
-<img src="https://img.shields.io/badge/python-3.10.x%20|%203.11.x-blueviolet" alt="Python 3.8.x | 3.10.x">
+<img src="https://img.shields.io/badge/python-3.8.x%20|%203.11.x-blueviolet" alt="Python 3.8.x | 3.10.x">
 
 ---
 
@@ -34,7 +34,7 @@ InSorg is an intelligent organoid image analysis platform integrated with state-
 
 ```bash
 
-# ===================== Environment and Dependency Installation Workflow (InSorg Project) =====================
+# Environment and Dependency Installation Workflow (InSorg Project)
 # 1. Create a conda virtual environment named InSorg_env with Python 3.8 (core runtime environment for the project)
 conda create -n InSorg_env python=3.8
 # 2. Activate the InSorg_env environment (all subsequent installations are executed in this isolated environment to avoid global dependency conflicts)
