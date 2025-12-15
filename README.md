@@ -57,34 +57,22 @@ pip install -r requirements.txt
 
 ---
 ### • Dataset Preparation
-
-- Properly organize your organoid datasets for training and inference by following this directory structure:
-
+Requests for access to the full dataset should be directed to the corresponding author.
+- The dataset structure is organized as follows:
 ```bash
 InSorg/
 ├── data/
-│   ├── coco/                # COCO格式数据集根目录（符合CV领域通用规范）
-│   │   ├── images/          # 所有图像文件（按子集分类）
-│   │   │   ├── train2017/   # 训练集图像（对应原train/，沿用COCO命名习惯）
-│   │   │   ├── val2017/     # 验证集图像（对应原val/）
-│   │   │   └── test2017/    # 测试集图像（对应原test/）
-│   │   ├── annotations/     # COCO格式标注文件（核心：JSON格式，含实例分割mask）
-│   │   │   ├── instances_train2017.json  # 训练集实例分割标注（替代原label/train/）
-│   │   │   ├── instances_val2017.json    # 验证集实例分割标注（替代原label/val/）
-│   │   │   └── instances_test2017.json   # 测试集实例分割标注（可选，替代原label/test/）
-│   │   ├── create_coco_anno.py  # 替换原create_txt.py：生成COCO格式JSON标注
-│   │   └── generated_files/     # 辅助文件目录（兼容原有txt文件，可选保留）
-│   │       ├── train2017.txt    # 训练集图像路径列表（辅助用，非COCO核心）
-│   │       ├── val2017.txt      # 验证集图像路径列表（辅助用）
-│   │       ├── test2017.txt     # 测试集图像路径列表（辅助用）
-│   │       ├── train_1_percent.txt  # 1%训练集（全监督）路径
-│   │       └── unlabeled_1_percent.txt # 1%训练集（无标注）路径
-│
-└── # 运行create_coco_anno.py后生成的核心文件说明：
-    ├── annotations/instances_train2017.json  # 训练集COCO标注（含bbox、segmentation等）
-    ├── annotations/instances_val2017.json    # 验证集COCO标注
-    ├── annotations/instances_test2017.json   # 测试集COCO标注（可选）
-    └── generated_files/*.txt                 # 保留原有txt路径文件（兼容下游脚本）
+│   ├── coco/                      # Root directory for COCO-format dataset
+│   │   ├── train/                 # Training set images (aligned with original train set, following COCO naming conventions)
+│   │   │   ├── train.image        # Training set image list file
+│   │   ├── val/                   # Validation set images (aligned with original val set)
+│   │   │   ├── val.image          # Validation set image list file
+│   │   ├── test/                  # Test set images (aligned with original test set)
+│   │   │   ├── test.iamge         # Test set image list file
+│   │   ├── annotations/           # COCO-format annotation files (core: JSON files containing instance segmentation masks)
+│   │   │   ├── instances_train2017.json  # Instance segmentation annotations for training set (replaces original label/train/)
+│   │   │   ├── instances_val2017.json    # Instance segmentation annotations for validation set (replaces original label/val/)
+│   │   │   └── instances_test2017.json   # Instance segmentation annotations for test set (optional, replaces original label/test/)
 ```
 
 - Execute the following command to generate data set splits:
