@@ -26,7 +26,7 @@ InSorg is an intelligent organoid image analysis platform integrated with state-
 
 ## 📦Getting Started
 
-<img src="https://img.shields.io/badge/python-3.10.x%20|%203.11.x-blueviolet" alt="Python 3.10.x | 3.11.x">
+<img src="https://img.shields.io/badge/python-3.10.x%20|%203.11.x-blueviolet" alt="Python 3.8.x | 3.10.x">
 
 ---
 
@@ -36,22 +36,25 @@ Automatic environment setup, please be patient.
 
 ```bash
 
-# This creates an isolated environment to avoid conflicts with existing packages
-conda create -n orgline_env python=3.10
+# ===================== Environment and Dependency Installation Workflow (InSorg Project) =====================
+# 1. Create a conda virtual environment named InSorg_env with Python 3.8 (core runtime environment for the project)
+conda create -n InSorg_env python=3.8
 
-# This switches to the OrgLine environment for package installation
-conda activate orgtrans_env
+# 2. Activate the InSorg_env environment (all subsequent installations are executed in this isolated environment to avoid global dependency conflicts)
+conda activate InSorg_env
 
-# Git is required to clone the repository from GitHub
-conda install git
+# 3. Install the PyTorch framework (core dependency for deep learning computations; the latest compatible version for Python 3.8 will be installed if no specific version is specified)
+pip3 install torch 
 
-# This downloads the complete source code to your local machine
-git clone https://github.com/shang0321/OrgTrans.git
+# 4. Install and upgrade the OpenMIM tool (package management tool for OpenMMLab projects, facilitating the installation of MM-series libraries)
+pip install -U openmim
+# 5. Install MMEngine via mim (MMEngine is the foundational runtime framework of OpenMMLab, providing universal engineering capabilities)
+mim install mmengine 
 
-# Change to the project directory containing all necessary files
-cd OrgTrans
+# 6. Install MMCV (fundamental computer vision library of OpenMMLab, offering core CV operators and tools)
+pip install mmcv
 
-# Install dependencies from requirements.txt
+# 7. Batch install remaining project dependencies (requirements.txt is the custom dependency list of the project, including all packages not installed individually)
 pip install -r requirements.txt
 ```
 
