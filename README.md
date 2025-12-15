@@ -69,9 +69,9 @@ InSorg/
 │   │   ├── test/                  # Test set images (aligned with original test set)
 │   │   │   ├── test.iamge         # Test set image list file
 │   │   ├── annotations/           # COCO-format annotation files (core: JSON files containing instance segmentation masks)
-│   │   │   ├── instances_train2017.json  # Instance segmentation annotations for training set (replaces original label/train/)
-│   │   │   ├── instances_val2017.json    # Instance segmentation annotations for validation set (replaces original label/val/)
-│   │   │   └── instances_test2017.json   # Instance segmentation annotations for test set (optional, replaces original label/test/)
+│   │   │   ├── instances_train.json  # Instance segmentation annotations for training set (replaces original label/train/)
+│   │   │   ├── instances_val.json    # Instance segmentation annotations for validation set (replaces original label/val/)
+│   │   │   └── instances_test.json   # Instance segmentation annotations for test set (optional, replaces original label/test/)
 ```
 
 ### • Training
