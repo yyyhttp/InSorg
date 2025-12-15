@@ -57,8 +57,7 @@ pip install -r requirements.txt
 
 ---
 ### • Dataset Preparation
-Requests for access to the full dataset should be directed to the corresponding author.
-- The dataset structure is organized as follows:
+The gastric and intestinal organoid dataset was randomly split into training, validation, and test subsets at a ratio of 8:1:1, with the detailed dataset structure presented as follows:
 ```bash
 InSorg/
 ├── data/
@@ -74,22 +73,6 @@ InSorg/
 │   │   │   ├── instances_val2017.json    # Instance segmentation annotations for validation set (replaces original label/val/)
 │   │   │   └── instances_test2017.json   # Instance segmentation annotations for test set (optional, replaces original label/test/)
 ```
-
-- Execute the following command to generate data set splits:
-
-```bash
-# This switches to the OrgTrans environment for package installation
-conda activate orgtrans_env
-
-# Navigate to the datasets directory
-cd datasets
-
-# You can modify the instructions to choose any proportion of fully-supervised labels, such as 1%, 5%, or any other value. Here’s how you can update it:
-# Make sure that 'data' and 'create_txt.py' are in the same directory.
-python create_txt.py
-```
-
-
 
 ### • Training
 
