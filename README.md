@@ -11,7 +11,7 @@ InSorg is an intelligent organoid image analysis platform integrated with state-
     src="https://github.com/yyyhttp/InSorg/blob/main/Picture/InSorg.png" 
     alt="InSorg Image" 
     style="max-width: 100%; height: auto; max-height: 500px;"  <!-- 核心样式 -->
-  />
+
 </div>
 
 ## 🧪Visualizations
