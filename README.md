@@ -54,7 +54,7 @@ pip install -r requirements.txt
 
 
 ## ➡️Usage
-
+The experimental validation was performed on a computing server equipped with NVIDIA A100 GPUs.
 ---
 ### • Dataset
 The gastric and intestinal organoid dataset was randomly split into training, validation, and test subsets at a ratio of 8:1:1, with the detailed dataset structure presented as follows:
@@ -82,14 +82,14 @@ conda activate InSorg_env
 # Enter InSorg project root directory
 cd Insorg
 # Launch model training on GPU 2 with InSorg.py configuration
-CUDA_VISIBLE_DEVICES=2 python tools/train.py InSorg.py
+CUDA_VISIBLE_DEVICES=2 python tools/train.py  InSorg/InSorg.py
 ```
 
 ### • Testing 
 
 ```shell script
 # Run model test on GPU 2 with InSorg.py config; --weights specifies pre-trained model weights
-CUDA_VISIBLE_DEVICES=2 python tools/test.py InSorg.py --weights
+CUDA_VISIBLE_DEVICES=2 python tools/test.py InSorg/InSorg.py -- weights
 ```
 
 
