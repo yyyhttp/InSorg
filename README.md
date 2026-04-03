@@ -100,5 +100,6 @@ We wish that the toolbox and benchmark could serve the growing research communit
 
 ## 📃Citation
 
-If you use this codebase in your research or project, please cite:
+Please cite the following work if you use this codebase in your research.
+
 
