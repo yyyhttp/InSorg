@@ -6,13 +6,9 @@
 
 InSorg is an intelligent organoid image analysis platform integrated with state-of-the-art computer vision and deep learning techniques. It enables high-throughput segmentation, detection, and quantitative analysis of brightfield organoid images, automatically extracts key biological metrics, supports multi-modal image inputs, and thus significantly improves the efficiency of workflows in cancer research and personalized medicine.
 
-<div align="center">
-  <img 
-    src="https://github.com/yyyhttp/InSorg/blob/main/Picture/InSorg.png" 
-    alt="InSorg Image" 
-    style="max-width: 100%; height: auto; max-height: 500px;"  <!-- 核心样式 -->
-
-</div>
+<p align="center">
+  <img src="Intro/abst.png" width="80%">
+</p>
 
 ## 🧪Visualizations
 
